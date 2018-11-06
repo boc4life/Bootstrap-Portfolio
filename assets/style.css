@@ -18,3 +18,9 @@
     margin-top:15px;
     padding:20px 60px;
 }
+
+#footer {
+    text-align:center;
+    color:#ffffff;
+    border-top: 8px solid #4aaaa5;
+}
