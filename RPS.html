@@ -1,0 +1,104 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>Andrew's Rock/Paper/Scissors</title>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    </head>
+    <body>
+            <script>
+
+                                        
+
+                    function rockFunction() {
+                        document.getElementById("youChose").innerHTML = "You Chose Rock";
+
+                        var computerChoices = ["R", "P", "S"];
+                        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+                        if (computerGuess == "R") {
+                            document.getElementById("computerChose").innerHTML = "Computer Chose Rock";
+                            document.getElementById("result").innerHTML = "TIE!";
+                        }
+                        else if (computerGuess == "P") {
+                            document.getElementById("computerChose").innerHTML = "Computer Chose Paper";
+                            document.getElementById("result").innerHTML = "YOU LOSE! :(";
+                        }
+                        else if (computerGuess == "S") {
+                            document.getElementById("computerChose").innerHTML = "Computer Chose Scissors";
+                            document.getElementById("result").innerHTML = "YOU WIN! :)";
+                        }
+                    }
+
+                    function paperFunction() {
+                        document.getElementById("youChose").innerHTML = "You Chose Paper";
+                        
+                        var computerChoices = ["R", "P", "S"];
+                        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+                        
+                        if (computerGuess == "R") {
+                            document.getElementById("computerChose").innerHTML = "Computer Chose Rock";
+                            document.getElementById("result").innerHTML = "YOU WIN! :)";
+                        }
+                        else if (computerGuess == "P") {
+                            document.getElementById("computerChose").innerHTML = "Computer Chose Paper";
+                            document.getElementById("result").innerHTML = "TIE!";
+                        }
+                        else if (computerGuess == "S")  {
+                            document.getElementById("computerChose").innerHTML = "Computer Chose Scissors";
+                            document.getElementById("result").innerHTML = "YOU LOSE! :(";
+                        }
+                    }
+
+                    function scissorsFunction() {
+                        document.getElementById("youChose").innerHTML = "You Chose Scissors";
+                        
+                        var computerChoices = ["R", "P", "S"];
+                        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+                        
+                        if (computerGuess == "R") {
+                            document.getElementById("computerChose").innerHTML = "Computer Chose Rock";
+                            document.getElementById("result").innerHTML = "YOU LOSE! :(";
+                        }
+                        else if (computerGuess == "P") {
+                            document.getElementById("computerChose").innerHTML = "Computer Chose Paper";
+                            document.getElementById("result").innerHTML = "YOU WIN! :)";
+                        }
+                        else if (computerGuess == "S") {
+                            document.getElementById("computerChose").innerHTML = "Computer Chose Scissors";
+                            document.getElementById("result").innerHTML = "TIE!";
+                        }
+                    }
+                            
+                </script>
+
+        <nav class="navbar-brand d-flex justify-content-center">
+            <h2>Welcome to Rock/Paper/Scissors!</h2>
+        </nav>
+        <br><br>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <p><h3 style="text-align:center">Click a button to play!</h3></p>
+                <br>
+            <div class="container-fluid d-inline-flex justify-content-center">
+                <button onclick="rockFunction()" type="button" class="btn btn-danger btn-lg w-25" id="rockButton">Rock</button>
+                <button onclick="paperFunction()" type="button" class="btn btn-primary btn-lg w-25" id="paperButton">Paper</button>
+                <button onclick="scissorsFunction()" type="button" class="btn btn-warning btn-lg w-25" id="scissorsButton">Scissors</button>
+            </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <p id="youChose" style="text-align:center"></p><br>
+                <p id="computerChose" style="text-align:center"></p><br>
+                <p id="result" style="text-align:center"></p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+
+    </body>
+</html>

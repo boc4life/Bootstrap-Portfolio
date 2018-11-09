@@ -7,8 +7,9 @@
     background-image: url("https://img.freepik.com/free-photo/white-wall_1194-5956.jpg?size=338&ext=jpg");
     min-height:100%;
     min-width:100%;
-    position:fixed;
+    position:relative;
     left:0;
+    overflow:auto;
 }
 
 .navbar {
@@ -18,10 +19,19 @@
 #bodytron {
     margin-top:15px;
     padding:20px 60px;
+    background-color:#ffffff;
 }
 
 #footer {
     text-align:center;
     color:#ffffff;
     border-top: 8px solid #4aaaa5;
+}
+
+.caption {
+    background-color:#4aaaa5;
+}
+
+.spantext {
+    color:#ffffff;
 }
